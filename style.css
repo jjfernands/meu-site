@@ -1,0 +1,148 @@
+* {
+  margin: 0; /* margin é o espaçamento externo do elemento */
+  padding: 0; /* padding é o espaçamento interno do elemento */
+  box-sizing: border-box; /* para que o padding e margin sejam aplicados corretamente */
+}
+body {
+  background-image: url("./assets/bg.jpg");
+  background-repeat: no-repeat; /* keyword */
+  background-size: 100% auto; /* width e height */
+  background-position: top center; /* posicao horizontal e vertical */
+  background-color: #121214; /* cor de fundo HEXADECIAL */ 
+  color: white; /* cor do texto dentro do body*/
+}
+
+body *, :root {
+  font-family: "Inter"; /* fonte do body */
+  line-height: 160%; /* espaçamento entre linhas */
+}
+
+header {
+  padding-top: 2rem; /* espaçamento interno superior */
+  text-align: center; /* centraliza o texto */
+}
+
+header img {
+  width: 15rem; /* tamanho da imagem */
+}
+
+main {
+  max-width: 36rem; /* largura máxima do main */
+  width: 90%; /* largura do main */
+  margin: 3rem auto; /* margem superior e inferior de 3rem, centralizado horizontalmente */
+}
+
+section {
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%); /* gradiente linear de cores */
+  border-radius: 0.625rem; /* bordas arredondadas de 0.625rem */
+  padding-top: 4px; /* espaçamento interno superior de 4px */
+}
+
+section > div {
+  padding: 2rem; /* espaçamento interno de 2rem */
+  padding-top: 1.5rem; /* espaçamento interno superior de 1.5rem */
+  border-radius: 0.5rem; /* bordas arredondadas de 0.5rem */
+  background-color: #2A2634; /* cor de fundo do div */
+}
+
+section h2 {
+  letter-spacing: -0.47px; /* espaçamento entre letras */
+}
+
+section p {
+  letter-spacing: -0.18px; /* espaçamento entre letras */
+  color: #A1A1AA;
+}
+
+/* Animação de aparição do elemento */
+main section {
+  opacity: 0; /* opacidade inicial */
+  transform: translateY(2rem);
+
+  animation-name: appear; /* nome da animação */
+  animation-duration: 700ms; /* duração da animação */
+  animation-fill-mode: forwards; /* mantém o estado final da animação */
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1; /* opacidade final */
+    transform: translateY(0); /* posição final */
+  }
+}
+
+form {
+  display: flex; /* exibe os elementos em linha */
+  gap: 0.85rem; /* espaçamento entre os elementos */
+  flex-wrap: wrap; /* permite que os elementos se movam para a próxima linha se não houver espaço suficiente */
+  margin: 1.25rem 0; /* margem superior e inferior de 1.25rem e laterais 0 */
+}
+
+input, select {
+  all: unset; /* remove todos os estilos padrão do elemento */
+  border: 2px solid #9147ff; /* borda de 2px sólida roxa */
+  border-radius: 0.5rem; /* bordas arredondadas de 0.5rem */
+  padding: 0.675rem;/* espaçamento interno de 0.675rem */
+  font-size: 0.875rem; /* tamanho da fonte de 0.875rem */
+  background-color: #00000066; /* cor de fundo preta com opacidade */
+}
+
+input {
+  flex: 1; /* ocupa todo o espaço disponível */
+}
+
+button {
+  width: 100%; /* largura total do botão */
+  border: 0; /* remove a borda padrão */
+  background-image: linear-gradient(245deg,#9572FC 0%, #43E7AD 50%, #E2D45C 100%); /* gradiente linear de cores */
+  padding: 0.675rem; /* espaçamento interno de 0.675rem */
+  border-radius: 0.5rem; /* bordas arredondadas de 0.5rem */
+  font-weight: bold; /* texto em negrito */
+  text-transform: uppercase; /* transforma o texto em maiúsculas */
+  letter-spacing: 0.12px; /* espaçamento entre letras */
+  transition: all 0.3s; /* transição suave para todas as propriedades do botão */
+}
+
+button:hover {
+  cursor: pointer; /* cursor de ponteiro ao passar o mouse */
+  transform: translateY(-2px); /* move o botão para cima ao passar o mouse */
+  box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2); /* sombra do botão */
+}
+
+button:disabled {
+ transition: initial; /* remove a transição ao desabilitar o botão */
+ transform:initial; /* remove a transformação ao desabilitar o botão */
+ box-shadow: initial; /* remove a sombra do botão */
+ cursor: not-allowed; /* cursor de não permitido ao passar o mouse */
+ color: black; /* cor do texto do botão desabilitado */
+}
+
+#aiResponse {
+  background: rgba(0, 0 ,0 ,0.4); /* cor de fundo preta com opacidade */
+  border-radius: 0.5rem; /* bordas arredondadas de 0.5rem */
+  padding: 1.25rem; /* espaçamento interno de 1.25rem */
+  border-left: 4px solid #43E7AD;
+}
+
+#aiResponse ul {
+  padding-left: 1.5rem; /* espaçamento interno à esquerda de 1.5rem */
+  opacity: 0.8; /* opacidade de 0.8 */
+}
+
+#aiResponse p {
+  color: white; /* cor do texto */
+}
+
+.loading {
+  animation: pulse 1s infinite; /* animação de pulso infinita */
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5; /* reduz a opacidade para 50% no meio da animação */
+  }
+}
