@@ -30,6 +30,6 @@ GitHub Pages        | Hospedagem frontend estática
 **📫 Contato**
 
 João Victor Fernandes <br>
-LinkedIn: [https://www.linkedin.com/in/joaovictorsa](https://www.linkedin.com/in/joao-victor-sa292527?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app).<br>
+LinkedIn: [https://www.linkedin.com/in/joaovictorsa](https://www.linkedin.com/in/joao-victor-sa292527?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)<br>
 GitHub: [https://github.com/joaovictorsa](https://github.com/jjfernands)<br>
 Email: joaovictor2905@hotmail.com
